@@ -3,24 +3,28 @@ using System.Collections.Generic;
 
 namespace classes
 {
+    // creating a public class
     public class Employee
     {
-
+        // getting and setting shorthand, setting up for code below?
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Title { get; set; }
         public DateTime StartDate { get; set; }
 
     }
+    // creating class company
     public class Company
     {
 
+        // getting and setting shorthand, setting up for code below??
         public DateTime FoundingDate { get; set; }
         public string CompanyName { get; set; }
         public List<Employee> Employees = new List<Employee>();
         public void ListEmployees()
         {
 
+            // looping through employee list, console logging their info
             foreach (Employee employee in Employees)
             {
                 Console.WriteLine($"{employee.FirstName} {employee.LastName}: {employee.Title}");
@@ -30,8 +34,10 @@ namespace classes
 
     }
 
+    // creating class program
     class Program
     {
+        // this is rendering the main code 
         static void Main(string[] args)
 
         {
@@ -65,6 +71,7 @@ namespace classes
                 StartDate = DateTime.Now,
             };
 
+            // adding all employees to the employee class
             EmilyInc.Employees.Add(Asa);
             EmilyInc.Employees.Add(Tim);
             EmilyInc.Employees.Add(Alexa);
